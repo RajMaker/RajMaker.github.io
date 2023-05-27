@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+
+	<style type="text/css">
+		body{
+			background: #001;
+			display: flex;
+			align-content: center;
+			justify-content: center;
+		}
+
+		fieldset{
+			background:rgba(255, 255, 255,0.9);
+			width: 13.4pc;
+			height: 20pc;
+			border-radius: 1pc;
+			outline: none;
+			border: none;
+			margin-top: 5pc;
+			overflow: hidden;
+			}
+
+
+
+
+		#display{
+			width: 13pc;
+			height: 3pc;
+			margin-top: 1pc;
+			outline: none;
+			font-size: 25px;
+			background:;
+			text-align: right;
+			border-radius: 4px;
+		}
+
+		#btn #input{
+			background:#002;
+			width: 3pc;
+			height: 3pc;
+			font-size: 22px;
+			border-radius: 50%;
+			margin: 1px;
+			color: #ffff;
+		}
+
+		#btn #input:active{color: teal;}
+
+		#minus{
+			background:darkcyan;
+			width: 6pc;
+			height: 3pc;
+			font-size: 22px;
+			border-radius: 5px;
+			margin: 1px;
+			color:#fff;
+			border-top-color:orange;
+			border-left-color:orange;
+			border-bottom-color:#002;
+			border-right-color:#002;
+			animation-name: minus;
+			}
+
+		#minus:hover{
+			transition: 2s;
+			border-top-color:#002;
+			border-left-color:#002;
+			border-bottom-color:orange;
+			border-right-color:orange;
+
+		}
+
+
+	</style>
+
+
+</head>
+<body>
+	<fieldset id="box">
+		<input type="text" name="display" id="display" placeholder="0">
+
+		<div id="btn">
+			<input type="button" value="Off" id="input" onclick="display.value=''">
+			<input type="button" value="Del" id="input" onclick="display.value = display.value.toString().slice(0,-1)">
+			<input type="button" value="." id="input" onclick="display.value +='.'">
+			<input type="button" value="/" id="input"onclick="display.value +='/'">
+		</div>
+
+
+		<div id="btn">
+			<input type="button"  value="7" id="input" onclick="display.value +='7'">
+			<input type="button"  value="8" id="input" onclick="display.value +='8'">
+			<input type="button"  value="9" id="input" onclick="display.value +='9'">
+			<input type="button"  value="x" id="input" onclick="display.value +='*'">
+		</div>
+
+		<div id="btn">
+			<input type="button" id="input" value="4" onclick="display.value +='4'">
+			<input type="button" id="input" value="5" onclick="display.value +='5'">
+			<input type="button" id="input" value="6" onclick="display.value +='6'">
+			<input type="button" id="input" value="-" id="input" onclick="display.value +='-'">
+		</div>
+
+		<div id="btn">
+			<input type="button" value="1" id="input" onclick="display.value +='1'">
+			<input type="button" value="2" id="input" onclick="display.value +='2'">
+			<input type="button" value="3" id="input" onclick="display.value +='3'">
+			<input type="button" value="+" id="input" onclick="display.value +='+'"></div>
+		
+
+		<div id="btn">
+			<input type="button" value="0" id="input" onclick="display.value +='0'">
+			<input type="button" value="00" id="input" onclick="display.value+='00'">
+			<input type="button" value="=" id="minus" id="input" onclick="display.value=eval(display.value)">
+			
+		</div>
+	</fieldset>
+</body>
+
+
+</html>
